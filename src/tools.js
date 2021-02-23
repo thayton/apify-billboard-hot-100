@@ -61,8 +61,8 @@ const getDaysOfWeekInMonth = (year, monthIndex, dayOfWeek) => {
  *
  * because 12/13/1980 is date of the Saturday ending that week.
  *
- * This function returns a list of such Saturdays for each week in 
- * the given month of the specified year formatted the same way 
+ * getWeeksInMonth() returns a list of such Saturdays for each week 
+ * in the given month of the specified year formatted the same way 
  * Billboard does in their URLs.
  *
  * For example, given the month of January in the year 1983:
