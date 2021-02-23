@@ -45,7 +45,7 @@ const getDaysOfWeekInMonth = (year, monthIndex, dayOfWeek) => {
 /*
  * Billboard Hot 100 identifies the weeks in a month by the last Saturday 
  * in each week (Sun-Sat). So, if you wanted to see hot 100 list for the 
- * week of 12/7/1980 - 12/13/1980 (Sun to Sat):
+ * week of 12/7/1980 - 12/13/1980:
  *
  *        December 1980
  *     Su Mo Tu We Th Fr Sa
