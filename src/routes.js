@@ -9,7 +9,6 @@ const {
  * Collect the top 100 songs for the week
  */
 exports.DETAIL = async ({ $, request }) => {
-    const week = path.basename(request.loadedUrl);
     const chart = {
         week: path.basename(request.loadedUrl),
         songs: []
