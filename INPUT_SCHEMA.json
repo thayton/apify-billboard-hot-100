@@ -1,17 +1,24 @@
 {
-  "title": "CheerioCrawler Template",
-  "description": "lorem ipsum",
-  "type": "object",
-  "schemaVersion": 1,
-  "properties": {
-    "startUrls": {
-      "title": "Start URLs",
-      "type": "array",
-      "description": "URLs to start with.",
-      "editor": "requestListSources"
-    }
-  },
-  "required": [
-    "startUrls"
-  ]
+    "title": "Billboard Scraper Input Schema",
+    "description": "Input schema for Billboard Hot 100 scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "years": {
+            "title": "List of years",
+            "type": "array",
+            "description": "List of years to scrape from Billboard Hot 100 weekly charts",
+            "editor": "requestListSources"
+        },
+        "proxyConfiguration": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "editor": "proxy",
+            "description": "The best option is usually Automatic proxy. But you can also use your own proxies or no proxy",
+            "prefill": { "useApifyProxy": true }
+        }
+    },
+    "required": [
+        "years"
+    ]
 }

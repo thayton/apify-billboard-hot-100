@@ -115,11 +115,11 @@ const getWeeksInYear = (year) => {
  */
 exports.getSources = async () => {
     const input = await Apify.getInput();
-    log.debug(`input: (${input.length} years) ${input}`);
+    log.debug(`input: (${input.years.length} years) ${input.years}`);
     
     let sources = [];
     
-    for (const year of input) {
+    for (const year of input.years) {
         let weeks = getWeeksInYear(year);
         weeks = _.shuffle(weeks);
 
