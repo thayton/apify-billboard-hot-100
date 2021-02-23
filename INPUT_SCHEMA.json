@@ -7,8 +7,7 @@
         "years": {
             "title": "List of years",
             "type": "array",
-            "description": "List of years to scrape from Billboard Hot 100 weekly charts",
-            "editor": "requestListSources"
+            "description": "List of years to scrape from Billboard Hot 100 weekly charts"
         },
         "proxyConfiguration": {
             "title": "Proxy configuration",
