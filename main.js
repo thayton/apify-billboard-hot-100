@@ -33,7 +33,7 @@ Apify.main(async () => {
         proxyConfiguration,
         maxRequestRetries: 1,
         maxRequestsPerCrawl: weeks.length + 1,
-        maxConcurrency: proxyConfiguration === 'undefined' ? SINGULAR_MAX_CONCURRENCY : PARALLEL_MAX_CONCURRENCY,
+        maxConcurrency: proxyConfiguration === undefined ? SINGULAR_MAX_CONCURRENCY : PARALLEL_MAX_CONCURRENCY,
         handlePageFunction: async context => {
             const { request } = context;
 
