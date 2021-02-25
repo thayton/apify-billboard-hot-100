@@ -6,8 +6,27 @@ const {
 } = Apify;
 
 const _ = require("underscore");
+
 const SATURDAY = 6;
 const MONTHS_IN_YEAR = 12;
+
+const MIN_DELAY_BETWEEN_REQS = 1;
+const MAX_DELAY_BETWEEN_REQS = 8;
+
+const MS_PER_SEC = 1000;
+
+const getRandomWait = () => {
+    const delta = MAX_DELAY_BETWEEN_REQS - MIN_DELAY_BETWEEN_REQS;
+    const nSecs = (Math.random() * delta) + MIN_DELAY_BETWEEN_REQS;
+
+    return Math.floor(nSecs) * MS_PER_SEC;
+};
+
+exports.randomDelay = async () => {
+    const mSec = getRandomWait();
+    log.debug(`Delaying ${mSec/1000} seconds`);
+    await new Promise(r => setTimeout(r, mSec));
+};
 
 /*
  * Return a list of Date objects for each day of the month
@@ -113,13 +132,12 @@ const getWeeksInYear = (year) => {
  * Generate a list of URLs for each week of the year for
  * every year specified in INPUT
  */
-exports.getSources = async () => {
-    const input = await Apify.getInput();
-    log.debug(`input: (${input.years.length} years) ${input.years}`);
+exports.getWeeks = async (years) => {
+    log.debug(`years: (${years.length} years) ${years}`);
     
     let sources = [];
     
-    for (const year of input.years) {
+    for (const year of years) {
         let weeks = getWeeksInYear(year);
         weeks = _.shuffle(weeks);
 
