@@ -49,7 +49,6 @@ Example for the week of [3/2/1980-3/8/1980](https://www.billboard.com/charts/hot
 
 ```
 {
-{
   "week": "1980-03-08",
   "songs": [
     {
