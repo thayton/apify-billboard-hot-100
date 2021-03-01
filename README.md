@@ -78,7 +78,7 @@ Example for the week of [3/2/1980-3/8/1980](https://www.billboard.com/charts/hot
 
 ### Running
 
-After setting the years to scrape and the proxy configuration in INPUT.json, you can 
-run the actor locally by running the following command:
+After setting the years to scrape and the proxy configuration in INPUT.json, you can run the actor locally 
+using the [Apify CLI](https://docs.apify.com/cli) by running the following command:
 
     $ apify run -p
