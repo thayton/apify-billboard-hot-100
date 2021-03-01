@@ -1,8 +1,9 @@
 ## Billboard Hot 100 Scraper
 
-Billboard Hot 100 Scraper is an Apify actor for scraping the Billboard Hot 100 weekly charts for a
-specific year (or list of years). It is build on top of [Apify SDK](https://sdk.apify.com/) and you
-can run it both on Apify [platform](https://my.apify.com/) and locally.
+Billboard Hot 100 Scraper is an [Apify actor](https://apify.com/actors) for scraping the [Billboard
+Hot 100](https://www.billboard.com/charts/hot-100) weekly charts for a specific year (or list of years).
+It is build on top of [Apify SDK](https://sdk.apify.com/). You can run it on both Apify's
+[platform](https://my.apify.com/) and locally.
 
 - [Input](#input)
 - [Output](#output)
